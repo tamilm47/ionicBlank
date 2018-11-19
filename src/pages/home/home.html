@@ -1,14 +1,21 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-menu [content]="content">
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+	<ion-header>
+		 <ion-navbar align-title="center">
+    		<ion-title>Menu</ion-title>
+  		</ion-navbar>
+	</ion-header>
+
+
+	<ion-content padding>
+		<ion-list>
+			<button [class.activePageHighlight]="isActive(p)" ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">
+          		<ion-icon item-start [name]="p.icon"></ion-icon>
+          		{{ p.pageTitle }}
+        	</button>
+		</ion-list>
+	</ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
