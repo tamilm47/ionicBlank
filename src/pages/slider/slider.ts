@@ -30,7 +30,7 @@ slides = [
   }
 
   goToHome(){
-  	this.navCtrl.setRoot('BasicPage');
+  	this.navCtrl.setRoot('HomePage');
   }
 
 }

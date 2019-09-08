@@ -7,18 +7,15 @@
 <ion-header>
 
   <ion-navbar>
-  	    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Basic</ion-title>
+    <ion-title>Introduction1</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding (swipe)="swipeRightAndLeft($event)">
 
-  <h3>Ionic Advanced Menu Starter</h3>
+  <h3>Ionic Introduction 1 Starter</h3>
 
   <p>
     If you get lost, the </p>

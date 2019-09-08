@@ -1,11 +1,9 @@
-import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform, LoadingController  } from 'ionic-angular';
+import { Component } from '@angular/core';
+import { Platform, LoadingController  } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Storage } from '@ionic/storage';
 
-import { SliderPage } from '../pages/slider/slider';
-import { HomePage } from '../pages/home/home';
 
 @Component({
   templateUrl: 'app.html'

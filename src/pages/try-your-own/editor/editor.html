@@ -1,0 +1,18 @@
+<!--
+  Generated template for the EditorPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+</ion-header>
+
+
+<ion-content>
+  <div></div>
+  <ion-item>
+    <ion-textarea rows="7" name="editorTextArea" placeholder="Type your query..." [(ngModel)]="queryValue"></ion-textarea>
+  </ion-item>
+  <button ion-button color="secondary" round (click)="getQuery()">Run</button>
+  <button ion-button color="secondary" round>Restore</button>
+</ion-content>

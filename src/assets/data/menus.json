@@ -1,0 +1,68 @@
+[
+  {
+  "pageTitle": "SQL Introduction", 
+  "pageName": "IntroductionPage", 
+  "icon": "home"
+  },
+  {
+    "pageTitle": "SQL Database and Table", 
+    "pageName": "DatabaseTablePage", 
+    "icon": "home"
+  },
+  {
+    "pageTitle": "SQL Basics commands", 
+    "icon": "home",
+    "subPages": [{
+      "pageTitle": "Select",
+      "pageName": "SelectPage"
+    }, {
+      "pageTitle": "Insert",
+      "pageName": "InsertPage"
+    }, {
+      "pageTitle": "Update",
+      "pageName": "UpdatePage"
+    }, {
+      "pageTitle": "Delete",
+      "pageName": "DeletePage"
+    }, {
+      "pageTitle": "Join",
+      "pageName": "JoinPage"
+    }, {
+      "pageTitle": "Keys",
+      "pageName": "KeysPage"
+    }]
+  },
+  {
+  "pageTitle": "SQL Functions", 
+  "icon": "contacts",
+  "subPages": [{
+        "pageTitle": "String Functions",
+        "pageName": "StringFunctionsPage"
+      }, {
+        "pageTitle": "Aggregate Functions",
+        "pageName": "AggregateFunctionsPage"
+      }, {
+        "pageTitle": "MathematicalFunctions",
+        "pageName": "MathematicalFunctionsPage"
+      }, {
+        "pageTitle": "Date Functions",
+        "pageName": "DateFunctionsPage"
+      }, {
+        "pageTitle": "Others",
+        "pageName": "OthersFunctionsPage"
+      }]
+  },
+  {
+    "pageTitle": "SQL Loops and Statements", 
+    "pageName": "LoopsStatementsPage", 
+    "icon": "home"
+  },  {
+    "pageTitle": "SQL Advanced", 
+    "pageName": "AdvancedPage", 
+    "icon": "home"
+  },  {
+    "pageTitle": "Misc", 
+    "pageName": "MiscPage", 
+    "icon": "home"
+  }
+]

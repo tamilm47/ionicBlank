@@ -1,21 +1,66 @@
-<ion-menu [content]="content">
+<ion-menu [content]="content" side="left" id="menu-left">
 
 	<ion-header>
 		 <ion-navbar align-title="center">
-    		<ion-title>Menu</ion-title>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
   		</ion-navbar>
 	</ion-header>
 
+	<ion-content>
 
-	<ion-content padding>
+	<div style="height:25%;">
+        <ion-thumbnail class='mtitle' item-start style="z-index:999999;margin-top: 0%; height:161px;width:100%;">
+          <img src="./assets/imgs/slider_4.png" style="height: 100%;width: 100%;">
+        </ion-thumbnail>
+     </div>
 		<ion-list>
-			<button [class.activePageHighlight]="isActive(p)" ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">
-          		<ion-icon item-start [name]="p.icon"></ion-icon>
-          		{{ p.pageTitle }}
-        	</button>
-		</ion-list>
+      <ion-item [class.activePageHighlight]="isActive(p)" ion-item *ngFor="let p of pages;  let i=index" (click)="openPage(p, i)">
+        <ion-row>
+          <!-- Parent Pages  -->
+          <ion-col class="menu-name">
+            <span ion-text>
+              {{p.pageTitle}}
+              <ion-icon [name]="selectedMenu == i? 'arrow-down' : 'arrow-forward'" *ngIf="p.subPages" float-right></ion-icon>
+            </span>
+
+            <!-- Child Pages  -->
+            <ion-list no-lines [hidden]="selectedMenu != i">
+              <ion-item [class.activePageHighlight]="isActive(subPage)" no-border *ngFor="let subPage of p.subPages; let i2=index" text-wrap (click)="openPage(subPage)">
+                <ion-row>
+                  <ion-col col-10 class="menu-name"><span ion-text color="color2">&nbsp;{{subPage.pageTitle}}</span></ion-col>
+                </ion-row>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+
+    </ion-list>
 	</ion-content>
 
 </ion-menu>
+   
+
+<ion-menu [content]="content" side="right" id="menu-right">
+    <ion-header>
+       <ion-navbar align-title="center">
+          <button ion-button menuToggle>
+              <ion-icon name="menu"></ion-icon>
+            </button>
+            <ion-title>Right</ion-title>
+        </ion-navbar>
+    </ion-header>
+  
+    <ion-content>
+        <ion-list>
+            <button ion-item menuClose *ngFor="let page of rightMenuTitle" (click)="openPageRight(page)">
+                {{ page.title }}
+              </button>
+          </ion-list>
+    </ion-content>
+</ion-menu>
+
 
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

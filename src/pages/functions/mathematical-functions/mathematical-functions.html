@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+  	 <button ion-button menuToggle="left" start>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Mathematical Functions</ion-title>
+    <button ion-button menuToggle="right" end>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <super-tabs id="databaseTableTabs" tabsPlacement="top" toolbarBackground="secondary" toolbarColor="light" indicatorColor="light" [config]="{ sideMenu: 'both' }" (tabSelect)="onTabSelect($event)">
+    <super-tab [root]="page1" title="Description" icon="home" id="descriptionTab"></super-tab>
+    <super-tab [root]="page2" title="Example" icon="pin" id="exampleTab"></super-tab>
+    <super-tab [root]="page3" title="Editor" icon="heart" id="editorTab"></super-tab>
+  </super-tabs>
+
+</ion-content>
