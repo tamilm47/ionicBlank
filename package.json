@@ -29,7 +29,7 @@
     "@ionic/lab": "^2.0.10",
     "@ionic/storage": "^2.2.0",
     "ajv": "^6.10.2",
-    "angular": "^1.7.8",
+    "angular": "^1.8.0",
     "com.telerik.plugins.nativepagetransitions": "0.6.5",
     "cordova-sqlite-storage": "3.3.0",
     "hammerjs": "^2.0.8",
